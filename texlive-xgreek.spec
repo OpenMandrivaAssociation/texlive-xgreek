@@ -1,12 +1,12 @@
-# revision 24147
+# revision 25876
 # category Package
 # catalog-ctan /macros/xetex/latex/xgreek
-# catalog-date 2011-09-27 17:21:55 +0200
+# catalog-date 2012-04-08 19:39:35 +0200
 # catalog-license lppl
-# catalog-version 2.3
+# catalog-version 2.4
 Name:		texlive-xgreek
-Version:	2.3
-Release:	2
+Version:	2.4
+Release:	1
 Summary:	XeLaTeX package for typesetting Greek language documents (beta release)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/xetex/latex/xgreek
