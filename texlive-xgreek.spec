@@ -59,3 +59,20 @@ if the format file has not been built with the babel mechanism.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Sat Apr 14 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4-1
++ Revision: 790844
+- Update to latest release.
+
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.3-2
++ Revision: 757647
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.3-1
++ Revision: 719937
+- texlive-xgreek
+- texlive-xgreek
+- texlive-xgreek
+
