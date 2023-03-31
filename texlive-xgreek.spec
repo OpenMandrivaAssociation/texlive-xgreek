@@ -1,6 +1,6 @@
 Name:		texlive-xgreek
 Version:	64300
-Release:	1
+Release:	2
 Summary:	XeLaTeX package for typesetting Greek language documents (beta release)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/xetex/latex/xgreek
