@@ -1,5 +1,5 @@
 Name:		texlive-xgreek
-Version:	69268
+Version:	69652
 Release:	1
 Summary:	XeLaTeX package for typesetting Greek language documents (beta release)
 Group:		Publishing
