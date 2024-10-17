@@ -3,7 +3,7 @@ Version:	69652
 Release:	1
 Summary:	XeLaTeX package for typesetting Greek language documents (beta release)
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/xetex/latex/xgreek
+URL:		https://www.ctan.org/tex-archive/macros/xetex/latex/xgreek
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.doc.r%{version}.tar.xz
