@@ -1,54 +1,31 @@
-Name:		texlive-xgreek
-Version:	69652
-Release:	1
-Summary:	XeLaTeX package for typesetting Greek language documents (beta release)
+%global tl_name xgreek
+%global tl_revision 79601
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.5.1
+Release:	%{tl_revision}.1
+Summary:	Greek Language Support for XeLaTeX and LuaLaTeX
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/xetex/latex/xgreek
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.source.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/unicodetex/latex/xgreek
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xgreek.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This package has been designed so to allow people to typeset
-Greek language documents using XeLaTeX. And it is released in
-the hope that people will use it and spot errors, bugs,
-features so to improve it. Practically, it provides all the
-capabilities of the greek option of the babel package. The
-package can be invoked with any of the following options:
-monotonic (for typesetting modern monotonic Greek), polytonic
-(for typesetting modern polytonic Greek), and ancient (for
-typesetting ancient texts). The default option is monotonic.
-The command \setlanguage{<lang>} to activate the hyphenation
-patterns of the language <lang> This, however, can be done only
-if the format file has not been built with the babel mechanism.
+This package has been designed so to allow people to typeset Greek
+language documents using XeLaTeX or LuaLaTeX. It is released in the hope
+that people will use it and spot errors, bugs, features so to improve
+it. Practically, it provides all the capabilities of the greek option of
+the babel package. The package can be invoked with any of the following
+options: monotonic (for typesetting modern monotonic Greek), polytonic
+(for typesetting modern polytonic Greek), and ancient (for typesetting
+ancient texts). The default option is monotonic. The command
+\setlanguage{<lang>} activates the hyphenation patterns of the language
+<lang>. This, however, can only be done if the format file has not been
+built with the babel mechanism.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/xgreek
-%doc %{_texmfdistdir}/doc/latex/xgreek
-#- source
-%doc %{_texmfdistdir}/source/latex/xgreek
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
